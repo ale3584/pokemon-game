@@ -5,7 +5,6 @@ const Layout = ({ title, descr, urlBg, colorBg }) => {
     backgroundColor: colorBg,
     backgroundImage: "url(" + urlBg + ")",
   };
-  console.log(HeaderStyle);
   return (
     <section className={s.root} style={HeaderStyle}>
       <div className={s.wrapper}>
