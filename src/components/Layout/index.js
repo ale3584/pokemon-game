@@ -14,7 +14,16 @@ const Layout = ({ title, descr, urlBg, colorBg, children }) => {
             <h3>{title}</h3>
             <span className={s.separator}></span>
           </div>
-          <div className={`${s.desc} ${s.full}`}>{children}</div>
+          {!children ? (
+            <div className={`${s.desc} ${s.full}`}>{descr}</div>
+          ) : (
+            ""
+          )}
+          {children ? (
+            <div className={`${s.desc} ${s.full}`}>{children}</div>
+          ) : (
+            ""
+          )}
         </article>
       </div>
     </section>
